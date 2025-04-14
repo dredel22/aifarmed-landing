@@ -65,3 +65,18 @@
   </div>
 </body>
 </html>
+<a id="cta-button" class="cta-button" href="#" onclick="showMessage()">Contact Us For Investment Opportunities</a>
+<script>
+  function showMessage() {
+    // Hide the button after click
+    document.getElementById('cta-button').style.display = 'none';
+    
+    // Create and show the message
+    var message = document.createElement('div');
+    message.innerHTML = 'Hellol, I am interested in envesting in this project!';
+    message.style.color = 'green';
+    message.style.fontSize = '1.2em';
+    message.style.marginTop = '20px';
+    document.querySelector('.container').appendChild(message);
+  }
+</script>
