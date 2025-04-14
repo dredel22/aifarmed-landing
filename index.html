@@ -45,6 +45,11 @@
       font-size: 0.9em;
       color: #777;
     }
+    .success-message {
+      font-size: 1.2em;
+      color: green;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -56,13 +61,30 @@
     <p>
       Vanilla is one of the most valuable crops in the world, yet each flower must be hand-pollinated in just a day. Our mission at AIFarmed is to change that.
     </p>
-    <a class="cta-button" href="mailto:anddelbuss@gmail.com?subject=Vanilla%20Robot%20Launch%20Notification&body=Hi%2C%20I%27d%20like%20to%20be%20notified%20when%20your%20Kickstarter%20goes%20live!" target="_blank">
-      Notify Me On Launch
-    </a>
+    <!-- New CTA Button -->
+    <a id="cta-button" class="cta-button" href="#" onclick="showMessage()">Contact Us For Investment Opportunities</a>
+
+    <!-- Success Message (Hidden Initially) -->
+    <div id="success-message" class="success-message" style="display:none;">
+      Thanks! We’ll get back to you soon! Stay tuned for our Kickstarter launch!
+    </div>
+    
     <footer>
       © 2025 AIFarmed. All rights reserved. Kickstarter campaign launching soon — stay tuned and join our journey.
     </footer>
   </div>
+
+  <script>
+    function showMessage() {
+      // Hide the button after it's clicked
+      document.getElementById('cta-button').style.display = 'none';
+      
+      // Show the success message
+      document.getElementById('success-message').style.display = 'block';
+      
+      // Open email client
+      window.location.href = "mailto:anddelbuss@gmail.com?subject=Vanilla%20Robot%20Launch%20Notification&body=Hi%2C%20I%27d%20like%20to%20be%20notified%20when%20your%20Kickstarter%20goes%20live!";
+    }
+  </script>
 </body>
 </html>
-
