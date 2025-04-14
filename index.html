@@ -82,8 +82,10 @@
       // Show the success message
       document.getElementById('success-message').style.display = 'block';
       
-      // Open email client
-      window.location.href = "mailto:anddelbuss@gmail.com?subject=Vanilla%20Robot%20Launch%20Notification&body=Hi%2C%20I%27d%20like%20to%20be%20notified%20when%20your%20Kickstarter%20goes%20live!";
+      // Open the email client with the new message
+      setTimeout(function() {
+        window.location.href = "mailto:anddelbuss@gmail.com?subject=Vanilla%20Robot%20Investment%20Inquiry&body=I%20would%20like%20to%20invest%20in%20this%20project.";
+      }, 500); // Adds a small delay before opening email
     }
   </script>
 </body>
